@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - Stock Prediction App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?w=1600&auto=format&fit=crop&q=80") no-repeat center center fixed;
+            background-size: cover;
+            /* Changed font to Gill Sans MT */
+            font-family: "Gill Sans MT", "Gill Sans", "GillSans", sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        a.button {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 14px 28px;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            a.button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Stock Price Prediction App</h1>
+        <a class="button" href="{{ url_for('select_stock') }}">Continue</a>
+    </div>
+</body>
+</html>

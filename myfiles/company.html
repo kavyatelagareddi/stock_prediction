@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ company_name }} Stock Prediction</title>
+  <style>
+    body {
+      font-family: "Gill Sans MT", "Gill Sans", "GillSans", sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .result {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .model {
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Highlight based on higher accuracy */
+    .model.best {
+      border: 2px solid #4CAF50;
+      background-color: #e8f7e7;
+    }
+
+    .graph {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .metrics {
+      margin-top: 20px;
+    }
+
+    .metrics div {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{ company_name }} Stock Price Prediction</h1>
+
+    <div class="result">
+      <!-- LSTM highlighted if its accuracy ≥ GRU's accuracy -->
+      <div class="model {% if lstm_accuracy >= gru_accuracy %}best{% endif %}">
+        <h2>LSTM Model</h2>
+        <p>RMSE: {{ lstm_rmse }}</p>
+        <p>Accuracy: {{ lstm_accuracy }}%</p>
+        <p>Predicted Next Price: ₹{{ lstm_next_price }}</p>
+      </div>
+
+      <!-- GRU highlighted if its accuracy > LSTM's accuracy -->
+      <div class="model {% if gru_accuracy > lstm_accuracy %}best{% endif %}">
+        <h2>GRU Model</h2>
+        <p>RMSE: {{ gru_rmse }}</p>
+        <p>Accuracy: {{ gru_accuracy }}%</p>
+        <p>Predicted Next Price: ₹{{ gru_next_price }}</p>
+      </div>
+    </div>
+
+    <div class="graph">
+      <h3>Stock Price Trend</h3>
+      <img src="data:image/png;base64,{{ graph }}" alt="Stock Price Trend">
+    </div>
+
+    <div class="metrics">
+      <div>Best Model: 
+        {% if lstm_accuracy >= gru_accuracy %}
+          <span class="highlight">LSTM</span>
+        {% else %}
+          <span class="highlight">GRU</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
