@@ -65,3 +65,23 @@ It provides a web interface where users can enter stock symbols, and view predic
 
 ## 📁 Project Structure
 
+stock_prediction/
+├── app.py # Flask application
+├── ml.ipynb # Machine Learning workflow notebook
+├── pred.py # Prediction logic
+├── models/ # Saved ML models
+├── myfiles/ # Additional files (e.g., datasets)
+├── requirements.txt # Dependencies
+├── templates/ # HTML templates for Flask
+└── static/ # Static files (CSS, JS)
+
+
+---
+
+## ⚡ Author
+
+Kavya Telagareddi
+
+---
+
+Feel free to ⭐ the repository if you find it useful!
