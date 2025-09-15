@@ -80,7 +80,10 @@ stock_prediction/
 
 Here is how the stock prediction app looks in action:
 
-![App Demo](assets/demo_screenshot.png)
+![App Demo](assets/demo_ss.png)
+![APP Demo](assets/demo2.png)
+![APP Demo](assets/demo3.png)
+![APP Demo](assets/demo4.png)
 
 ## ⚡ Author
 
