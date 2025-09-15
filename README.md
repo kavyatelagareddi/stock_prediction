@@ -76,7 +76,11 @@ stock_prediction/
 └── static/ # Static files (CSS, JS)
 
 
----
+---## 🎬 Demo
+
+Here is how the stock prediction app looks in action:
+
+![App Demo](assets/demo_screenshot.png)
 
 ## ⚡ Author
 
