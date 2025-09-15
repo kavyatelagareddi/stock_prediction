@@ -76,14 +76,7 @@ stock_prediction/
 └── static/ # Static files (CSS, JS)
 
 
----## 🎬 Demo
 
-Here is how the stock prediction app looks in action:
-
-![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo_ss.png)  
-![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo2.png)  
-![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo3.png)  
-![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo4.png)
 
 
 ## ⚡ Author
