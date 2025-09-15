@@ -80,10 +80,11 @@ stock_prediction/
 
 Here is how the stock prediction app looks in action:
 
-![App Demo](assets/demo_ss.png)
-![APP Demo](assets/demo2.png)
-![APP Demo](assets/demo3.png)
-![APP Demo](assets/demo4.png)
+![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo_ss.png)  
+![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo2.png)  
+![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo3.png)  
+![App Demo](https://github.com/kavyatelagareddi/stock_prediction/raw/main/assets/demo4.png)
+
 
 ## ⚡ Author
 
